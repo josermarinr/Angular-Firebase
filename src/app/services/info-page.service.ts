@@ -8,14 +8,30 @@ import { Infopage } from '../interfaces/infopage.interface';
 export class InfoPageService {
   info: Infopage = {};
   cargada = false;
+  equipo : any[] = [];
+
   constructor( private http: HttpClient) {
     //console.log('servicio de infopagina');
-     
-    this.http.get('/assets/data/data-page.json')
-        .subscribe( (resp: Infopage) => {
-          this.cargada =true;
-          this.info = resp;
-          console.log(resp);
-        })
+     this.cargarEquipo();
+    this.cargarInfo();
    }
+
+
+   private cargarInfo(){
+    this.http.get('/assets/data/data-page.json')
+    .subscribe( (resp: Infopage) => {
+      this.cargada =true;
+      this.info = resp;
+     
+    })
+   }
+
+      private cargarEquipo(){
+        this.http.get('https://portfolio-8f92c.firebaseio.com/equipo.json')
+        .subscribe( (resp: any[]) => {
+          this.equipo = resp;
+         
+      })
+    }
 }
+
