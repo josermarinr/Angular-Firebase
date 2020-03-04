@@ -1,11 +1,31 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { PortfolioComponent } from './pages/portfolio/portfolio.component';
+import { AboutComponent } from './pages/about/about.component';
+import { ItemComponent } from './pages/item/item.component';
+import { BlogComponent } from './pages/blog/blog.component';
+import { ContactComponent } from './pages/contact/contact.component';
+import { DesignComponent } from './pages/design/design.component';
+import { WebComponent } from './pages/web/web.component';
+import { ChooseComponent } from './pages/choose/choose.component';
 
 
-const routes: Routes = [];
+const routes: Routes = [
+  {path: 'home', component: PortfolioComponent},
+  {path: 'about', component:AboutComponent},
+  {path: 'blog', component:BlogComponent},
+  {path: 'whatido', component:ChooseComponent},
+  {path: 'contact', component:ContactComponent},
+  {path: 'design', component:DesignComponent},
+  {path: 'item', component:ItemComponent},
+  {path: 'web-exp', component:WebComponent},
+  {path: '**', pathMatch: 'full', redirectTo: 'home'}
+];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {useHash:true})],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+
+ }

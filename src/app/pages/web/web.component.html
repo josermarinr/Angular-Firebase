@@ -1,0 +1,94 @@
+<style>
+    .hash-link {
+      position: relative;
+    }
+    .hash-link:before {
+      content: '#';
+      opacity: 0;
+      position: absolute;
+      right: 100%;
+      transform: translatex(.25em);
+      transition: .3s;
+    }
+    .hash-link:hover:before {
+      opacity: 1;
+      transform: translatex(0);
+    }
+    
+    .layout-ctrl-input:checked + .demo-switch {
+      color: #a0a0a0;
+    }
+    .demo-switch {
+      cursor: pointer;
+      display: none;
+      height: 32px;
+      transition: color .3s;
+      width: 28px;
+    }
+    .demo-switch:hover {
+      color: #a0a0a0;
+    }
+    .demo-switch svg {
+      height: 100%;
+      width: 100%;
+    }
+    
+    @media (min-width: 40em) {
+      .demo-switch {
+        display: inline-block !important;
+      }
+    }
+    
+  </style>
+  
+    <div class="item-inside__meta">
+      <h1 class="ae-u-bolder rk-portfolio-title ">Documentation</h1>
+    </div>
+    <div class="ae-container-fluid ae-container-fluid--inner">
+      <div class="ae-grid ae-grid au-xs-ptp-1">
+        <div class="ae-grid__item item-lg-12">
+          <h2 id="portfolio-items"><a href="#portfolio-items" class="hash-link">Portfolio Items</a>
+          </h2>
+          <h3 id="static-items"><a href="#static-items" class="hash-link">Static Items</a>
+          </h3>
+          <p>You can create a static portfolio page by using our grid system <a href="http://themes-pixeden.com/aurora-kit/grid.html" class="au-underline">Aurora</a>, creating the grid structure with <code>ae-grid</code>, adding your items with <code>ae-grid__item</code>and <a href="http://themes-pixeden.com/aurora-kit/grid.html" class="au-underline">customizing</a> it as you want. </p>
+          <div class="ae-grid">
+            <div class="ae-grid__item item-lg-4"><a href="portfolio-item.html" class="rk-item"><img src="assets/img/project-1.jpg" alt="">
+                <div class="item-meta">
+                  <h2>Essential Stationery</h2>
+                  <p>Branding</p>
+                </div></a></div>
+            <div class="ae-grid__item item-lg-4"><a href="portfolio-item.html" class="rk-item"><img src="assets/img/project-4.jpg" alt="">
+                <div class="item-meta">
+                  <h2>Tumblr hammock</h2>
+                  <p>Packaging</p>
+                </div></a></div>
+            <div class="ae-grid__item item-lg-4"><a href="portfolio-item.html" class="rk-item"><img src="assets/img/project-5.jpg" alt="">
+                <div class="item-meta">
+                  <h2>Biodiesel etsy</h2>
+                  <p>Branding</p>
+                </div></a></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ae-grid__item item-lg-8 item-lg--offset-2">
+        <pre>
+            <code>
+                &lt;div class="ae-grid"&gt; 
+                    &lt;!-- first column --&gt;
+                        &lt;div class="ae-grid__item item-lg-4"&gt; 
+                            &lt;a href="item-url" class="rk-item"&gt;
+                                &lt;img src="img-url" /&gt;
+                                &lt;span class="item-meta"&gt;
+                                    &lt;h2&gt;Title&lt;/h2&gt;
+                                    &lt;p&gt;Category&lt;/p&gt;
+                                &lt;/span&gt;
+                            &lt;/a&gt;
+                        &lt;/div&gt;
+                        &nbsp;
+                    &lt;!-- other columns... --&gt;
+                &lt;/div&gt;
+            </code>
+        </pre>
+      </div>
