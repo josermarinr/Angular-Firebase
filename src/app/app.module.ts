@@ -13,6 +13,7 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { DesignComponent } from './pages/design/design.component';
 import { WebComponent } from './pages/web/web.component';
 import { ChooseComponent } from './pages/choose/choose.component';
+import { SearchComponent } from './pages/search/search.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ChooseComponent } from './pages/choose/choose.component';
     ContactComponent,
     DesignComponent,
     WebComponent,
-    ChooseComponent
+    ChooseComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
